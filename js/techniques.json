@@ -1,0 +1,24 @@
+var techniques = {
+	"white": {
+		"self_defense": [
+			"Checking the Storm",
+			"Buckling Branch",
+			"Battering Ram",
+			"Hammering Vice"
+		],
+		"forms": [
+			"Pinyan 1"
+		],
+		"knife_and_gun": []
+	},
+	"yellow": {
+		"self_defense": [
+			"Bending Tree",
+			"Menacing Twirl"
+		],
+		"forms": [
+			"Pinyan 2"
+		],
+		"knife_and_gun": []
+	}
+}
