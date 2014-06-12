@@ -1,7 +1,7 @@
-var rank = "White";
+var rank = null;
 var selfDefense = false;
 var knifeAndGun = false;
-var interval = 0.1;
+var interval = 0;
 var techsToPractice = [];
 
 $(document).ready(function(){
@@ -45,8 +45,13 @@ $(document).ready(function(){
 	
 	//set button behaviors
 	$('#hajime').click(function(){
-		$('#menu_container').toggleClass("visible hidden");
-		$('#app_container').toggleClass("visible hidden");
+		if(rank != null || interval != 0){
+			$('#menu_container').toggleClass("visible hidden");
+			$('#app_container').toggleClass("visible hidden");
+		}
+		else{
+			//maybe shake the button?
+		}
 		practice();
 	});
 	
