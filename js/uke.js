@@ -1,6 +1,5 @@
 var rank = "White";
 var selfDefense = false;
-var forms = false;
 var knifeAndGun = false;
 var interval = 0.1;
 var techsToPractice = [];
@@ -20,9 +19,6 @@ $(document).ready(function(){
 	$('#self_defense_toggle').click(function(){
 		selfDefense = true;
 	});
-	$('#forms_toggle').click(function(){
-		forms = true;
-	});
 	$('knife_and_gun_toggle').click(function(){
 		knifeAndGun = true;
 	});
@@ -40,10 +36,6 @@ $(document).ready(function(){
 	});
 	
 	//set interval
-	$('#3s').click(function(){
-		interval = 3000;
-		$('#time_display').html('0:03');
-	});
 	$('#5s').click(function(){
 		interval = 5000;
 		$('#time_display').html('0:05');
@@ -51,6 +43,10 @@ $(document).ready(function(){
 	$('#10s').click(function(){
 		interval = 10000;
 		$('#time_display').html('0:10');
+	});
+	$('#20s').click(function(){
+		interval = 20000;
+		$('#time_display').html('0:20');
 	});
 
 
@@ -63,18 +59,12 @@ function practice(){
 			if(selfDefense){
 				techsToPractice = techsToPractice.concat(techniques["yellow"]["self_defense"]);
 			}
-			if(forms){
-				techsToPractice = techsToPractice.concat(techniques["yellow"]["forms"]);
-			}
 			if(knifeAndGun){
 				techsToPractice = techsToPractice.concat(techniques["yellow"]["knife_and_gun"]);
 			}
 		case "White":
 			if(selfDefense){
 				techsToPractice = techsToPractice.concat(techniques["white"]["self_defense"]);
-			}
-			if(forms){
-				techsToPractice = techsToPractice.concat(techniques["white"]["forms"]);
 			}
 			if(knifeAndGun){
 				techsToPractice = techsToPractice.concat(techniques["white"]["knife_and_gun"]);
@@ -84,6 +74,10 @@ function practice(){
 	
 	//randomize order
 	techsToPractice.sort(function() { return 0.5 - Math.random() });
+	//add "All Done!"
+	techsToPractice.push("All Done!");
+	//store original number of techs
+	var maxTechs = techsToPractice.length;
 	
 	//every X seconds
 	setInterval(function(){
@@ -93,7 +87,8 @@ function practice(){
 		techsToPractice.splice(0, 1);
 		//speak technique name
 		//update progress bar
-
+		var percentComplete = techsToPractice.length/maxTechs * 100;
+		$('#progress').css('width', percentComplete + "%");
+		console.log("Percent complete: " + percentComplete);
 	}, interval);
-
 }
