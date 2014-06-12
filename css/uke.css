@@ -8,3 +8,14 @@
 	font-size: 40pt;
 	text-align: center;
 }
+
+#head_bg {
+	background-image: url(../img/tatsu-md.jpg);
+	background-position: center center;
+}
+
+#head_title {
+	color: white;
+	background-color: black;
+	text-align: center;
+}
