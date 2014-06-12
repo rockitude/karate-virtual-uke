@@ -9,16 +9,98 @@ var techniques = {
 		"forms": [
 			"Pinyan 1"
 		],
-		"knife_and_gun": []
+		"knife_and_gun": [
+			"First Overhead Knife"
+		]
 	},
 	"yellow": {
 		"self_defense": [
 			"Bending Tree",
-			"Menacing Twirl"
+			"Menacing Twirl",
+			"Fleeing Snake",
+			"Rotating Destruction B"
 		],
 		"forms": [
-			"Pinyan 2"
+			"Pinyan 2",
+			"8 Point Blocking System"
 		],
-		"knife_and_gun": []
-	}
+		"knife_and_gun": [
+			"Push/Pull Overhead Knife",
+			"1st Gun (To Chest)"
+		]
+	},
+	"orange": {
+		"self_defense": [
+			"Circling Arm Bar",
+			"Downward Hammer",
+			"Wrist Grab #10",
+			"Rotating Destruction A"
+		],
+		"forms": [
+			"Kata 1",
+			"8 Point Blocking System with Strikes"
+		],
+		"knife_and_gun": [
+			"1st Straight-Ahead Knife"
+		]
+	},
+	"purple": {
+		"self_defense": [
+			"Combination 6",
+			"Combination 7",
+			"Combination 8",
+			"Combination 9"
+		],
+		"forms": [
+			"Kata 2",
+			"8 Point Blocking System with Movement"
+		],
+		"knife_and_gun": [
+			"2nd Straight-Ahead Knife"
+		]
+	},
+	"purple_stripe": {
+		"self_defense": [
+			"Combination 12",
+			"Combination 14"
+		],
+		"forms": [
+			"Kata 5"
+		],
+		"knife_and_gun": [
+			"Knife to Groin",
+			"Knife to Neck",
+			"Knife to Throat"
+		]
+	},
+	"blue": {
+		"self_defense": [
+			"Combination 1",
+			"Combination 2",
+			"Combination 3",
+			"Combination 4",
+			"Combination 5"
+		],
+		"forms": [
+			"Kata 3"
+		],
+		"knife_and_gun": [
+			"Club Technique (x5)"
+		]
+	},
+	"blue_stripe": {
+		"self_defense": [
+			"Combination 13",
+			"Combination 16",
+			"Combination 18",
+		],
+		"forms": [
+			"8 Point Blocking System with Redirection",
+			"Tension Blocking System"
+		],
+		"knife_and_gun": [
+			"2nd Gun Technique (Forehead)"
+		]
+	},
+
 }

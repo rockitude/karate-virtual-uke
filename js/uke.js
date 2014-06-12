@@ -14,7 +14,27 @@ $(document).ready(function(){
 		$('#rank_display').html('Yellow');
 		rank = "Yellow";
 	});
-	
+	$('#rank_orange').click(function(){
+		$('#rank_display').html('Orange');
+		rank = "Orange";
+	});
+	$('#rank_purple').click(function(){
+		$('#rank_display').html('Purple');
+		rank = "Purple";
+	});
+	$('#rank_purple_stripe').click(function(){
+		$('#rank_display').html('Purple with Stripe');
+		rank = "Purple_Stripe";
+	});
+	$('#rank_blue').click(function(){
+		$('#rank_display').html('Blue');
+		rank = "Blue";
+	});
+	$('#rank_blue_stripe').click(function(){
+		$('#rank_display').html('Blue with Stripe');
+		rank = "Blue_Stripe";
+	});
+
 	//set toggles
 	$('#self_defense_toggle').click(function(){
 		selfDefense = true;
@@ -55,6 +75,41 @@ $(document).ready(function(){
 function practice(){
 	//assemble list of techniques
 	switch(rank){
+	case "Blue_Stripe":
+			if(selfDefense){
+				techsToPractice = techsToPractice.concat(techniques["blue_stripe"]["self_defense"]);
+			}
+			if(knifeAndGun){
+				techsToPractice = techsToPractice.concat(techniques["blue_stripe"]["knife_and_gun"]);
+			}
+	case "Blue":
+			if(selfDefense){
+				techsToPractice = techsToPractice.concat(techniques["blue"]["self_defense"]);
+			}
+			if(knifeAndGun){
+				techsToPractice = techsToPractice.concat(techniques["blue"]["knife_and_gun"]);
+			}
+	case "Purple_Stripe":
+			if(selfDefense){
+				techsToPractice = techsToPractice.concat(techniques["purple_stripe"]["self_defense"]);
+			}
+			if(knifeAndGun){
+				techsToPractice = techsToPractice.concat(techniques["purple_stripe"]["knife_and_gun"]);
+			}
+		case "Purple":
+			if(selfDefense){
+				techsToPractice = techsToPractice.concat(techniques["purple"]["self_defense"]);
+			}
+			if(knifeAndGun){
+				techsToPractice = techsToPractice.concat(techniques["purple"]["knife_and_gun"]);
+			}
+		case "Orange":
+			if(selfDefense){
+				techsToPractice = techsToPractice.concat(techniques["orange"]["self_defense"]);
+			}
+			if(knifeAndGun){
+				techsToPractice = techsToPractice.concat(techniques["orange"]["knife_and_gun"]);
+			}
 		case "Yellow":
 			if(selfDefense){
 				techsToPractice = techsToPractice.concat(techniques["yellow"]["self_defense"]);
@@ -69,6 +124,8 @@ function practice(){
 			if(knifeAndGun){
 				techsToPractice = techsToPractice.concat(techniques["white"]["knife_and_gun"]);
 			}
+		break;
+		default:
 		break;
 	}
 	
